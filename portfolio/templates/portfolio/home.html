@@ -1,0 +1,43 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+
+{% block content %}
+    {% include 'includes/navbar.html' %}
+    <div class="row justify-content-center mb-3">
+
+        <div class="p-3 mb-2 bg-info text-dark">
+            <h1 id="blogtitle" class="text-center">Сергей Тамкович</h1>
+        </div>
+
+    </div>
+
+
+    <br>
+    <img src="{% static 'portfolio/img/photo_2022-05-13_21-08-57.jpg' %}"
+         class="rounded-lg mx-auto d-block border border-light" width="400" height="502" alt="">
+    <div class="row justify-content-center mb-3">
+        <div class="col-md-9 text-center">
+            <h1 id="hometext">Привет! Добро пожаловать на мой проект, сайт-портфолио начинающего разработчика Сергея
+                Тамковича.</h1>
+        </div>
+    </div>
+
+    <h2 class="mt-5">Портфолио</h2>
+    <hr>
+    <div class="row">
+        {% for project in projects %}
+            <div class="col-lg-4 col-md-6">
+                {% if project.url %}
+                    <a href="{{ project.url }}" target="_blank">
+                        <img src="{{ project.image.url }}" class="rounded-lg img-fluid mb-2">
+                    </a>
+                {% else %}
+
+                    <img src="{{ project.image.url }}" class="rounded-lg img-fluid mb-2" width="400" height="200">
+                {% endif %}
+                <h3>{{ project.title }}</h3>
+                <p id="project_description">{{ project.description }}</p>
+
+            </div>
+        {% endfor %}
+{% endblock %}

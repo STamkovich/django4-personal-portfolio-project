@@ -1,0 +1,11 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+{% include 'includes/navbar.html' %}
+    <div class="p-3 mb-2 bg-info text-dark"><h1>Блог Сергея Тамковича</h1></div>
+<h4>Количество написанных постов {{ blogs.count }}</h4>
+{% for blog in blogs %}
+    <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title_post }}</h2></a>
+    <h5>{{ blog.date|date:'M d Y' }}</h5>
+    <h2>{{ blog.post_info|truncatechars:100 }}</h2>
+{% endfor %}
+{% endblock %}

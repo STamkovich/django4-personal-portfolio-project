@@ -1,0 +1,33 @@
+{% load static %}
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="{% url 'home' %}">
+        <img src="{% static "portfolio/img/ST_logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Victor Logo">
+        <span style="font-size:1.35rem">amkovich</span>
+      </a>
+      <ul class="nav justify-content-center">
+  <li class="nav-item">
+    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
+  </li>
+          <li class="nav-item">
+    <a class="nav-link" href="#">Резюме</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://vk.com/stfrukt">VK</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link" href="https://t.me/savage1072">Telegram</a>
+  </li>
+          <li class="nav-item">
+    <a class="nav-link" href="https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true">Linkeding</a>
+  </li>
+          <li class="nav-item">
+    <a class="nav-link" href="https://github.com/STamkovich">GitHub</a>
+  </li>
+          <li class="nav-item">
+    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Мой блог</a>
+  </li>
+
+</ul>
+  </div>
+</nav>

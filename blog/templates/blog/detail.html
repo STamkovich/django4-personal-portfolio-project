@@ -1,0 +1,11 @@
+{% extends 'portfolio/base.html' %}
+{% block content %}
+{% include 'includes/navbar.html' %}
+<a href=""></a>
+<br>
+    <h1>{{ blog.title_post}}</h1>
+    <br>
+    <h3>--{{ blog.date|date:'F jS Y' }}--</h3>
+    <br>
+    <h2>{{ blog.post_info }}</h2>
+{% endblock %}
