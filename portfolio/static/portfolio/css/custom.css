@@ -1,0 +1,174 @@
+body {
+    background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url(background.jpg) no-repeat;
+    	position: relative;
+	font-family: 'Cairo', sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+	min-width: 320px;
+	overflow-x: hidden;
+	height: auto;
+    color: white;
+    background-size: cover;
+    background-attachment: fixed;
+   }
+
+.navbar {
+    color: #212529;
+    width: 100%;
+    height: 80px;
+    box-shadow: 0 4px 10px rgb(0, 206, 209, 1);
+}
+
+.navbar .container {
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-menu {
+    list-style-type: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.navbar-menu li {
+    display: inline-block;
+}
+
+.navbar-menu li a {
+    font-size: 23px;
+    display: inline-block;
+    color: aqua;
+    opacity: 0.9;
+    text-decoration: none;
+    padding: 15px;
+    transition: all .07s ease-in-out;
+}
+
+.navbar-menu li a:hover {
+    color: white;
+    opacity: 1;
+}
+
+.navbar-wrap {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.blog-link {
+    text-align: center;
+    color: black;
+    font-size: 23px;
+    margin-left: 20px;
+    padding: 15px 30px;
+    text-decoration: none;
+    background-color: darkturquoise;
+    border-radius: 30px;
+    box-shadow: 0 4px 6px rgba(0, 206, 209, .2);
+}
+
+.blog-link:hover {
+    transform: scale(1.04);
+   color: white;
+    opacity: 1;
+    transition: all .1s ease-out;
+    box-shadow: 0 9px 9px rgba(0, 206, 209, .5);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    font-size: 40px;
+    text-decoration: none;
+    color: darkturquoise;
+}
+
+.navbar-brand:hover {
+    color: white;
+    opacity: 1;
+    transition: all .07s ease-in-out;
+
+}
+
+.line {
+
+    color: aqua;
+}
+
+.url {
+    color: darkturquoise;
+     text-align: center;
+}
+
+.url:hover {
+    color: white;
+    text-decoration: none;
+}
+
+
+#blogtitle {
+    font-family: 'Cairo', sans-serif;
+    font-size: 4.0rem;
+}
+
+.blog {
+    font-family: 'Cairo', sans-serif;
+    font-size: 2.0rem;
+
+}
+
+@media (min-width: 1000px) {
+    #hometext {
+        font-family: 'Cairo', sans-serif;
+        font-size: 2.6rem;
+    }
+
+    #project_description {
+
+        font-family: 'Cairo', sans-serif;
+        font-size: 1.6rem;
+
+    }
+
+    #portfo {
+        font-family: 'Cairo', sans-serif;
+        font-size: 3.0rem;
+    }
+    #text {
+        text-align: center;
+    }
+
+    #blogtitle {
+        text-align: center;
+    }
+
+    #count-post {
+        text-align: center;
+    }
+
+}
+
+a {
+    text-decoration: none; /* Убираем подчёркивание */
+   }
+
+.name-post {
+    color: darkturquoise;
+
+}
+
+.name-post:hover {
+    color: white;
+}
+
+.text-center {
+    font-size: 2.0rem;
+    text-align: center;
+
+}
+
+IMG.displayed {
+    display: block;
+    margin-left: auto;
+    margin-right: auto
+}
