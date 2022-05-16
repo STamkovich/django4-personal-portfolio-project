@@ -1,33 +1,32 @@
 {% load static %}
-<nav class="navbar navbar-light bg-light">
-  <div class="container-fluid">
-    <a class="navbar-brand" href="{% url 'home' %}">
-        <img src="{% static "portfolio/img/ST_logo.png" %}" width="30" height="30" class="d-inline-block align-top" alt="Victor Logo">
-        <span style="font-size:1.35rem">amkovich</span>
-      </a>
-      <ul class="nav justify-content-center">
-  <li class="nav-item">
-    <a class="nav-link active" aria-current="page" href="{% url 'home' %}">Главная</a>
-  </li>
-          <li class="nav-item">
-    <a class="nav-link" href="#">Резюме</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="https://vk.com/stfrukt">VK</a>
-  </li>
-  <li class="nav-item">
-    <a class="nav-link" href="https://t.me/savage1072">Telegram</a>
-  </li>
-          <li class="nav-item">
-    <a class="nav-link" href="https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true">Linkeding</a>
-  </li>
-          <li class="nav-item">
-    <a class="nav-link" href="https://github.com/STamkovich">GitHub</a>
-  </li>
-          <li class="nav-item">
-    <a class="nav-link" href="{% url 'blog:all_blogs' %}">Мой блог</a>
-  </li>
 
-</ul>
-  </div>
+
+
+<nav class="navbar">
+    <div class="container">
+        <a href="{% url 'home' %}" class="navbar-brand">STamkovich</a>
+        <div class="navbar-wrap">
+            <ul class="navbar-menu">
+                <li>
+                    <a href="{% url 'home' %}">Главная</a>
+                </li>
+                <li>
+                    <a href="#" target="_blank">CV</a>
+                </li>
+                <li>
+                    <a href="https://vk.com/stfrukt" target="_blank">VKontakte </a>
+                </li>
+                <li>
+                    <a href="https://t.me/savage1072" target="_blank"> Telegram </a>
+                </li>
+                <li>
+                    <a href="https://www.linkedin.com/feed/?doFeedRefresh=true&nis=true" target="_blank">Linkeding</a>
+                </li>
+                <li>
+                    <a href="https://github.com/STamkovich" target="_blank">GitHub</a>
+                </li>
+            </ul>
+            <a href="{% url 'blog:all_blogs' %}" class="blog-link"> My Blog</a>
+        </div>
+    </div>
 </nav>

@@ -1,11 +1,13 @@
 {% extends 'portfolio/base.html' %}
+
+{% load static %}
+
 {% block content %}
-{% include 'includes/navbar.html' %}
-<a href=""></a>
-<br>
-    <h1>{{ blog.title_post}}</h1>
+
+<h1 class="text-center mt-5" >{{ blog.title_post }}</h1>
     <br>
-    <h3>--{{ blog.date|date:'F jS Y' }}--</h3>
-    <br>
-    <h2>{{ blog.post_info }}</h2>
+<h5 class="text-center text-muted mb-5">{{ blog.date|date:'--Y-m-d--'|upper }}</h5>
+
+<div class="text-center"><p>{{ blog.post_info|safe }}</p></div>
+
 {% endblock %}

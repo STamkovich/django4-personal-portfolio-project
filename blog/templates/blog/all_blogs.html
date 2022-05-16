@@ -1,11 +1,20 @@
 {% extends 'portfolio/base.html' %}
+{% load static %}
+<div class=".container">
 {% block content %}
-{% include 'includes/navbar.html' %}
-    <div class="p-3 mb-2 bg-info text-dark"><h1>Блог Сергея Тамковича</h1></div>
-<h4>Количество написанных постов {{ blogs.count }}</h4>
+    <br>
+<h1 id="blogtitle" class="text-center">Блог</h1>
+    <h3 id="count-post">Количество написанных постов {{ blogs.count }}</h3>
+
 {% for blog in blogs %}
-    <a href="{% url 'blog:detail' blog.id %}"><h2>{{ blog.title_post }}</h2></a>
-    <h5>{{ blog.date|date:'M d Y' }}</h5>
-    <h2>{{ blog.post_info|truncatechars:100 }}</h2>
+<div class="row justify-content-center my-3">
+  <div class="col-md-10">
+    <a class="name-post" href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title_post }}</h3></a>
+    <p class="text-muted">{{ blog.date|date:'Y-m-d'|upper }}</p>
+    <p class="blog">{{ blog.post_info|striptags|truncatechars:150 }}</p>
+  </div>
+</div>
+
 {% endfor %}
 {% endblock %}
+</div>
