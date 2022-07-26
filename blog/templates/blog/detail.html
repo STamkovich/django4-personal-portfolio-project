@@ -1,13 +1,14 @@
 {% extends 'portfolio/base.html' %}
 
 {% load static %}
-
+{% block Title %} Post {% endblock %}
 {% block content %}
-
-<h1 class="text-center mt-5" >{{ blog.title_post }}</h1>
     <br>
-<h5 class="text-center text-muted mb-5">{{ blog.date|date:'--Y-m-d--'|upper }}</h5>
+    <br>
+    <br>
+    <h1 class="info-post">{{ blog.title_post }} </h1>
+    <br>
+    <h5 class="text-center text-muted mb-5">{{ blog.date|date:'--Y-m-d--'|upper }}</h5>
 
-<div class="text-center"><p>{{ blog.post_info|safe }}</p></div>
-
+    <div class="text-center"><p>{{ blog.post_info|safe }}</p></div>
 {% endblock %}

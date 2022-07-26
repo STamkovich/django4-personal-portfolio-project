@@ -17,13 +17,14 @@
     <!-- Стили сайта -->
     <link rel="stylesheet" href="{% static 'portfolio/css/custom.css' %}">
 
-    <link rel="icon" type="image/png" href="{% static 'portfolio/img/logo.png' %}">
-    <title>STam</title>
+    <link rel="icon" type="image/png" href="{% static 'portfolio/img/icon-icx-logo.png' %}">
+   <title>{% block Title %} {% endblock %}</title>
 
 
 </head>
 
 <body>
+
 {% include 'includes/navbar.html' %}
 <div class="container">
     {% block content %} {% endblock %}

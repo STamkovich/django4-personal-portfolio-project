@@ -1,40 +1,38 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
+{% block Title %} STamkovich {% endblock %}
 {% block content %}
-    <br>
- <br>
-     <br>
-    <img src="{% static 'portfolio/img/photo_2022-05-13_21-08-57.jpg' %}"
-         class="rounded-lg mx-auto d-block border border-light" width="400" height="502" alt="">
+    <div class="image_home">
+    <img src="{% static 'portfolio/img/photo_2022-05-27_21-17-53-removebg (1).png' %}" alt="" style="width: 550px">
+    </div>
     <br>
     <div class="row justify-content-center mb-3">
-
             <h1 id="text">Привет! Меня зовут Сергей Тамкович! <br>Добро пожаловать на мой проект — сайт портфолио начинающего Python разработчика.</h1>
-
     </div>
     <br>
     <br>
-
     <h1 class="display-4">Portfolio</h1>
     <hr class="line">
+    <br>
     <div class="row">
-    {% for project in projects %}
-        <div class="col-lg-4 col-md-6">
-            {% if project.url %}
-                <a href="{{ project.url }}" target="_blank">
-                    <img src="{{ project.image.url }}" width="300" height="300"  class="displayed">
-                </a>
-                <br>
-                <a class="url" href="{{ project.url }}" target="_blank"><h3>{{ project.title }}</h3></a>
-            {% else %}
+        {% for project in projects %}
+            <div class="col-lg-4 col-md-6">
+                {% if project.url %}
+                    <a href="{{ project.url }}" target="_blank">
+                        <img src="{{ project.image.url }}" width="300" height="300" class="displayed" alt="">
+                    </a>
+                    <br>
+                    <a class="url"  href="{{ project.url }}" target="_blank"><h1>{{ project.title }}</h1></a>
+                {% else %}
 
-                <img src="{{ project.image.url }}" class="displayed" width="300" height="300" >
+                    <img src="{{ project.image.url }}" class="displayed" width="300" height="300">
 
 
-            {% endif %}
-            <p id="project_description">{{ project.description }}</p>
-        </div>
-    {% endfor %}
-    <hr class="line">
+                {% endif %}
+                <p id="project_description">{{ project.description }}</p>
+            </div>
+        {% endfor %}
+        <hr class="line">
+    <h2 id="text">Сайт-портфолио находиться на стадии разработки</h2>
     </div>
 {% endblock %}

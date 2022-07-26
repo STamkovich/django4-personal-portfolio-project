@@ -1,15 +1,17 @@
 {% extends 'portfolio/base.html' %}
 {% load static %}
+{% block Title %} Blog {% endblock %}
 <div class=".container">
 {% block content %}
     <br>
 <h1 id="blogtitle" class="text-center">Блог</h1>
+    <br>
     <h3 id="count-post">Количество написанных постов {{ blogs.count }}</h3>
-
+    <br>
 {% for blog in blogs %}
 <div class="row justify-content-center my-3">
   <div class="col-md-10">
-    <a class="name-post" href="{% url 'blog:detail' blog.id %}"><h3>{{ blog.title_post }}</h3></a>
+    <a class="name-post" href="{{ blog.get_url }}"><h1>{{ blog.title_post }}</h1></a>
     <p class="text-muted">{{ blog.date|date:'Y-m-d'|upper }}</p>
     <p class="blog">{{ blog.post_info|striptags|truncatechars:150 }}</p>
   </div>

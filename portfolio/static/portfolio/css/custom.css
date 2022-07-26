@@ -1,13 +1,13 @@
 body {
     background: linear-gradient(rgba(0,0,0,0.9), rgba(0,0,0,0.7)), url(background.jpg) no-repeat;
-    	position: relative;
+    position: relative;
 	font-family: 'Cairo', sans-serif;
 	font-size: 16px;
 	line-height: 1.4;
 	min-width: 320px;
 	overflow-x: hidden;
 	height: auto;
-    color: white;
+    color: whitesmoke;
     background-size: cover;
     background-attachment: fixed;
    }
@@ -15,7 +15,7 @@ body {
 .navbar {
     color: #212529;
     width: 100%;
-    height: 80px;
+    height: 75px;
     box-shadow: 0 4px 10px rgb(0, 206, 209, 1);
 }
 
@@ -57,6 +57,7 @@ body {
 }
 
 .blog-link {
+    font-family: 'Cairo', sans-serif;
     text-align: center;
     color: black;
     font-size: 23px;
@@ -64,13 +65,14 @@ body {
     padding: 15px 30px;
     text-decoration: none;
     background-color: darkturquoise;
-    border-radius: 30px;
-    box-shadow: 0 4px 6px rgba(0, 206, 209, .2);
+    border-radius: 15px;
+    box-shadow: 0 1px 2px rgba(0, 206, 209, .2);
+
 }
 
 .blog-link:hover {
     transform: scale(1.04);
-   color: white;
+    color: white;
     opacity: 1;
     transition: all .1s ease-out;
     box-shadow: 0 9px 9px rgba(0, 206, 209, .5);
@@ -98,6 +100,7 @@ body {
 .url {
     color: darkturquoise;
      text-align: center;
+    font-size: 2.0rem;
 }
 
 .url:hover {
@@ -108,34 +111,36 @@ body {
 
 #blogtitle {
     font-family: 'Cairo', sans-serif;
-    font-size: 4.0rem;
+    font-size: 3.5rem;
 }
 
 .blog {
     font-family: 'Cairo', sans-serif;
-    font-size: 2.0rem;
+    font-size: 1.8rem;
 
 }
 
 @media (min-width: 1000px) {
+    #text {
+    color: whitesmoke;
+    font-size: 35px;
+    text-align: center;
+}
     #hometext {
         font-family: 'Cairo', sans-serif;
-        font-size: 2.6rem;
+        font-size: 2.0rem;
     }
 
     #project_description {
 
         font-family: 'Cairo', sans-serif;
-        font-size: 1.6rem;
+        font-size: 1.5rem;
 
     }
 
     #portfo {
         font-family: 'Cairo', sans-serif;
-        font-size: 3.0rem;
-    }
-    #text {
-        text-align: center;
+        font-size: 2.0rem;
     }
 
     #blogtitle {
@@ -154,7 +159,7 @@ a {
 
 .name-post {
     color: darkturquoise;
-
+    font-size: 2.0rem;
 }
 
 .name-post:hover {
@@ -172,3 +177,16 @@ IMG.displayed {
     margin-left: auto;
     margin-right: auto
 }
+
+.info-post {
+    text-align: center;
+    font-family: 'Cairo', sans-serif;
+    font-size: 2.5rem;
+    color: whitesmoke;
+    top: 200px;
+}
+
+.image_home {
+    text-align: center;
+}
+
