@@ -17,22 +17,16 @@
     <div class="row">
         {% for project in projects %}
             <div class="col-lg-4 col-md-6">
-                {% if project.url %}
-                    <a href="{{ project.url }}" target="_blank">
+                    <a href="{% url 'info_project'  project.slug %}" target="_self">
                         <img src="{{ project.image.url }}" width="300" height="300" class="displayed" alt="">
                     </a>
                     <br>
-                    <a class="url"  href="{{ project.url }}" target="_blank"><h1>{{ project.title }}</h1></a>
-                {% else %}
-
-                    <img src="{{ project.image.url }}" class="displayed" width="300" height="300">
-
-
-                {% endif %}
-                <p id="project_description">{{ project.description }}</p>
+                    <a class="url"  href="{% url 'info_project'  project.slug %}" target="_self"><h1>{{ project.title }}</h1></a>
+                <p id="project_description">{{ project.description }}...</p>
+                <a class="url" href="{% url 'info_project'  project.slug %}" style="float: left" target="_self"> <h5> Подробнее >>></h5></a>
             </div>
         {% endfor %}
         <hr class="line">
-    <h2 id="text">Сайт-портфолио находиться на стадии разработки</h2>
+    <h2 id="text">Сайт-портфолио находиться на стадии разработки.</h2>
     </div>
 {% endblock %}

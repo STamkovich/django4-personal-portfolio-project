@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from .models import Project
-from django.views.generic import ListView
+from blog.models import Blog
+from django.views.generic import ListView, DetailView
 
 
 class HomepageDisplay(ListView):
@@ -14,3 +15,8 @@ class HomepageDisplay(ListView):
 #     return render(request, 'portfolio/home.html', {
 #         'projects': projects,
 #     })
+
+class DitailProject(DetailView):
+    template_name = 'portfolio/info_project.html'
+    model = Project
+    context_object_name = 'info'

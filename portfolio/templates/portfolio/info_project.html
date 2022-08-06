@@ -1,0 +1,21 @@
+{% extends 'portfolio/base.html' %}
+
+{% load static %}
+{% block Title %} Информация о проекте {{ info.title }}{% endblock %}
+{% block content %}
+    <br>
+    <br>
+    <br>
+    <h1 class="info-post"> {{ info.title }} </h1>
+    <br>
+    <div class="text-center"><p>{{ info.description }} </p>
+     {% if info.url %}
+        <a class="url2" href="{{ info.url }}" target="_blank">GitHub >>></a>
+    {% endif %}
+    <hr class="line">
+        <br>
+        {% for shot in info.portfolioshots_set.all %}
+            <img src="{{ shot.image.url }}" class="img-shot" alt="">
+        {% endfor %}
+    </div>
+{% endblock %}
